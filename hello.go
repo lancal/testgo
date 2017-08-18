@@ -154,11 +154,21 @@ func main() {
 	x[3] = 82
 	x[4] = 83
 
-	for i := 0; i < 5; i++ {
+/*	for i := 0; i < 5; i++ {
 		total += x[i]
 	}
 	fmt.Println(total / 5)
+*/
+
+
+	for i := 0; i < len(x); i++ {
+		total += x[i]
+	}
+	fmt.Println(total / float64(len(x)) )
+	fmt.Println("printed with len()")
+
 }
+
 
 
 
