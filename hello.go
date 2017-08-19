@@ -143,7 +143,7 @@ var(
 	fmt.Println(x[4])
 }*/
 
-func main() {
+/*func main() {
 
 	var x [5]float64
 	//x := [5]float64{ 98, 93, 77, 82, 83 }
@@ -156,27 +156,30 @@ func main() {
 	x[3] = 82
 	x[4] = 83
 
-/*	for i := 0; i < 5; i++ {
+		for i := 0; i < 5; i++ {
 		total += x[i]
 	}
 	fmt.Println(total / 5)
-*/
 
 
-/*	for i := 0; i < len(x); i++ {
+		for i := 0; i < len(x); i++ {
 		total += x[i]
 	}
 	fmt.Println(total / float64(len(x)) )
 	fmt.Println("printed with len()")
-*/
 
-/*	for _, value := range x {
+
+		for _, value := range x {
 		total += value
 	}
 	fmt.Println(total / float64(len(x)))
-*/
+
+
+}*/
 
 	//Slice
+
+/* func main () {
 
 	/*
 	slice1 := []int{1,2,3}
@@ -185,11 +188,112 @@ func main() {
 
 	*/
 
+	/*
 	slice1 := []int{1,2,3}
 	slice2 := make([]int, 2)
 	copy(slice2, slice1)
 	fmt.Println(slice1, slice2)
 
+*/
+
+func main () {
+
+	//maps
+
+	/*z := make(map[string]int)
+	z["key"] = 10
+	fmt.Println(z["key"])
+	delete(z, "key")
+	fmt.Println(z["key"])*/
+
+    /*
+
+	elements := make(map[string]string)
+	elements["H"] = "Hydrogen"
+	elements["He"] = "Helium"
+	elements["Li"] = "Lithium"
+	elements["Be"] = "Beryllium"
+	elements["B"] = "Boron"
+	elements["C"] = "Carbon"
+	elements["N"] = "Nitrogen"
+	elements["O"] = "Oxygen"
+	elements["F"] = "Fluorine"
+	elements["Ne"] = "Neon"
+	fmt.Println(elements["Li"])*/
+
+	/*
+	elements := map[string]string{
+		"H": "Hydrogen",
+		"He": "Helium",
+		"Li": "Lithium",
+		"Be": "Beryllium",
+		"B": "Boron",
+		"C": "Carbon",
+		"N": "Nitrogen",
+		"O": "Oxygen",
+		"F": "Fluorine",
+		"Ne": "Neon",
+	}
+
+
+	//name, ok := elements["O"]
+	//fmt.Println(name, ok)
+
+	if name, ok := elements["O"]; ok {
+		fmt.Println(name, ok)
+	}
+
+	*/
+
+	elements := map[string]map[string]string{
+
+		"H": {
+			"name":"Hydrogen",
+			"state":"gas",
+		},
+		"He": {
+			"name":"Helium",
+			"state":"gas",
+		},
+		"Li": {
+			"name":"Lithium",
+			"state":"solid",
+		},
+
+		"Be": {
+			"name":"Beryllium",
+			"state":"solid",
+		},
+
+		"B":  {
+			"name":"Boron",
+			"state":"solid",
+		},
+		"C":  {
+			"name":"Carbon",
+			"state":"solid",
+		},
+		"N":  {
+			"name":"Nitrogen",
+			"state":"gas",
+		},
+		"O":  {
+			"name":"Oxygen",
+			"state":"gas",
+		},
+		"F":  {
+			"name":"Fluorine",
+			"state":"gas",
+		},
+		"Ne":  {
+			"name":"Neon",
+			"state":"gas",
+		},
+	}
+	if el, ok := elements["Li"]; ok {
+
+		fmt.Println(el["name"], el["state"])
+	}
 
 }
 
