@@ -147,7 +147,8 @@ func main() {
 
 	var x [5]float64
 	//x := [5]float64{ 98, 93, 77, 82, 83 }
-	var total float64 = 0
+	//z := make([]float64, 5)
+	//var total float64 = 0
 
 	x[0] = 98
 	x[1] = 93
@@ -169,10 +170,25 @@ func main() {
 	fmt.Println("printed with len()")
 */
 
-	for _, value := range x {
+/*	for _, value := range x {
 		total += value
 	}
 	fmt.Println(total / float64(len(x)))
+*/
+
+	//Slice
+
+	/*
+	slice1 := []int{1,2,3}
+	slice2 := append(slice1, 4, 5)
+	fmt.Println(slice1, slice2)
+
+	*/
+
+	slice1 := []int{1,2,3}
+	slice2 := make([]int, 2)
+	copy(slice2, slice1)
+	fmt.Println(slice1, slice2)
 
 
 }
